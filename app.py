@@ -18,7 +18,7 @@ logging.basicConfig(level=logging.INFO)
 app = Flask(__name__)
 
 # Konfigurasi folder untuk menyimpan file yang diunggah
-UPLOAD_FOLDER = 'static1/uploads/'
+UPLOAD_FOLDER = 'static/uploads/'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 # Ukuran gambar harus SAMA PERSIS dengan saat training
 IMAGE_SIZE = (128, 128)
