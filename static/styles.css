@@ -1,0 +1,150 @@
+/* ====================================================== */
+/* THEME: COSMIC PURPLE GLASSMORPHISM (REVISED)           */
+/* ====================================================== */
+
+/* 1. Import Font & Pengaturan Dasar */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    /* Gradasi ungu gelap sebagai latar utama */
+    background-color: #1e1a3e;
+    background-image: 
+        linear-gradient(135deg, rgba(41, 36, 88, 0.95) 0%, rgba(26, 22, 59, 0.95) 100%),
+        /* Pola geometris subtil sebagai overlay */
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%233a3279' fill-opacity='0.1'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.4l-2.83 2.83-1.41-1.41L38.59 0H40v1.41z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* 2. Kontainer Utama */
+.main-container {
+    max-width: 850px;
+    width: 100%;
+}
+
+/* 3. Efek Kaca Buram (Glassmorphism) pada Kartu */
+.card-custom {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(19, 17, 44, 0.37);
+    color: #ffffff;
+}
+
+.card-body {
+    padding: 3rem;
+}
+
+/* 4. Tipografi & Judul */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+.card-title, .prediction-text {
+    /* Fallback color jika gradien tidak didukung browser */
+    color: #c792f2;
+    /* Efek gradien pada teks (dengan properti standar) */
+    background: linear-gradient(45deg, #a27cf2, #e78af0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2.5rem;
+}
+
+
+/* 5. Form & Tombol (Halaman Index) */
+.form-label {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+}
+
+.form-control-custom {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 10px;
+    padding: 12px 20px;
+    transition: all 0.3s ease;
+}
+
+.form-control-custom::-webkit-file-selector-button,
+.form-control-custom::file-selector-button {
+    color: #fff;
+    background-color: #6a5acd;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 15px;
+    transition: background-color 0.2s;
+}
+
+.form-control-custom:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: #a27cf2;
+    box-shadow: 0 0 0 0.25rem rgba(162, 124, 242, 0.25);
+}
+
+.btn-custom {
+    background: linear-gradient(45deg, #8e44ad, #6a5acd);
+    border: none;
+    border-radius: 10px;
+    padding: 14px;
+    font-weight: 600;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-custom:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+/* 6. Halaman Hasil (Result) */
+.uploaded-image {
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.prediction-title {
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.2rem;
+}
+
+.prediction-text {
+    font-size: 3.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.btn-secondary.btn-custom {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary.btn-custom:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
